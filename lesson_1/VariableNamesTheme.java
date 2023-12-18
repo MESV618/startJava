@@ -36,8 +36,8 @@ public class VariableNamesTheme {
         System.out.println("\tпроцент по вкладу = " + depositInterest);
 
         // (переменная хранит символ) &
-        char symbol = '&';
-        System.out.println("\tсимвол = " + symbol);
+        char ampersand = '&';
+        System.out.println("\tсимвол = " + ampersand);
 
         // код ошибки
         int errorCode = 20807;
@@ -88,16 +88,16 @@ public class VariableNamesTheme {
         System.out.println("\tдата начала = " + startDate);
 
         // окончание диапазона
-        byte rangeEnd = 127;
-        System.out.println("\tокончание диапазона = " + rangeEnd);
+        byte endRange = 127;
+        System.out.println("\tокончание диапазона = " + endRange);
 
         // полное имя работника месяца
         String monthEmployeeFullName = "John Green";
         System.out.println("\tполное имя работника месяца = " + monthEmployeeFullName);
 
         // заголовок электронной книги
-        String eBookHeader = "Java 8";
-        System.out.println("\tзаголовок электронной книги = " + eBookHeader);
+        String ebookTitle = "Java 8";
+        System.out.println("\tзаголовок электронной книги = " + ebookTitle);
 
         // размер
         byte size = 16;
@@ -121,40 +121,40 @@ public class VariableNamesTheme {
 
         System.out.println("\n2. boolean-переменные");
         // сотни равны?
-        boolean hundredsEqual = true;
-        System.out.println("\tсотни равны? = " + hundredsEqual);
+        boolean hasEqualHundreds = true;
+        System.out.println("\tсотни равны? = " + hasEqualHundreds);
 
         // компьютер включен?
-        boolean computerTurnedOn = true;
-        System.out.println("\tкомпьютер включен? = " + computerTurnedOn);
+        boolean isComputerTurnedOn = true;
+        System.out.println("\tкомпьютер включен? = " + isComputerTurnedOn);
 
         // есть равные цифры?
-        boolean availableEqualDigits = false;
-        System.out.println("\tесть равные цифры? = " + availableEqualDigits);
+        boolean hasEqualDigits = false;
+        System.out.println("\tесть равные цифры? = " + hasEqualDigits);
 
         // (что-либо) создано?
-        boolean created = true;
-        System.out.println("\t(что-либо) создано? = " + created);
+        boolean isCreated = true;
+        System.out.println("\t(что-либо) создано? = " + isCreated);
 
         // (что-либо) пустое?
-        boolean empty = false;
-        System.out.println("\t(что-либо) пустое? = " + empty);
+        boolean isEmpty = false;
+        System.out.println("\t(что-либо) пустое? = " + isEmpty);
 
         // (что-либо) активное?
-        boolean active = true;
-        System.out.println("\t(что-либо) активное? = " + active);
+        boolean isActive = true;
+        System.out.println("\t(что-либо) активное? = " + isActive);
 
         // новый?
-        boolean recent = true;
-        System.out.println("\tновый? = " + recent);
+        boolean isRecent = true;
+        System.out.println("\tновый? = " + isRecent);
 
         // электронная почта действительная?
-        boolean validEmail = true;
-        System.out.println("\tэлектронная почта действительная? = " + validEmail);
+        boolean isEmailValid = true;
+        System.out.println("\tэлектронная почта действительная? = " + isEmailValid);
 
         // имеются уникальные строки?
-        boolean availableUniqueRows = false;
-        System.out.println("\tимеются уникальные строки? = " + availableUniqueRows);
+        boolean hasUniqueRows = false;
+        System.out.println("\tимеются уникальные строки? = " + hasUniqueRows);
 
         System.out.println("\n3. Аббревиатуры");
         // старый universally unique identifier
@@ -166,16 +166,16 @@ public class VariableNamesTheme {
         System.out.println("\tпроизводитель оперативной памяти = " + ramManufacturer);
 
         // емкость жесткого диска
-        String hardDriveCapacity = "2TB";
-        System.out.println("\tемкость жесткого диска = " + hardDriveCapacity);
+        String hddCapacity = "2TB";
+        System.out.println("\tемкость жесткого диска = " + hddCapacity);
 
         // протокол передачи гипертекста
         String http = "http";
         System.out.println("\tпротокол передачи гипертекста = " + http);
 
         // сокращенный uniform resource locator
-        String url = "http://www.example.ru";
-        System.out.println("\tсокращенный uniform resource locator = " + url);
+        String shortUrl = "https://rb.gy/mob0qr";
+        System.out.println("\tсокращенный uniform resource locator = " + shortUrl);
 
         // новый идентификатор клиента
         int newClientId = 40658495;
