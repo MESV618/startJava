@@ -7,8 +7,8 @@ public class VariablesTheme {
         short ramGb = 16;
         System.out.println("\trandom access memory = " + ramGb + "gb");
 
-        int operatingSystemBitness = 64;
-        System.out.println("\toperating system bitness = " + operatingSystemBitness + "-bit");
+        int osBitness = 64;
+        System.out.println("\toperating system bitness = " + osBitness + "-bit");
 
         long ssdGb = 500;
         System.out.println("\tsolid-state drive capacity = " + ssdGb + "gb");
@@ -17,8 +17,8 @@ public class VariablesTheme {
         System.out.println("\tcentral processing unit clock speed = " + cpuClockSpeedGhz + "Ghz");
 
         double gpuCoreClockSpeedMhz = 400;
-        System.out.println("\tgraphics processor unit core clock speed = " + gpuCoreClockSpeedMhz +
-                "Mhz");
+        System.out.println("\tgraphics processor unit core clock speed = " +
+                gpuCoreClockSpeedMhz + "Mhz");
 
         char cpuTdp = 'H';
         System.out.println("\tcentral processing unit thermal design power = " + cpuTdp);
@@ -27,14 +27,14 @@ public class VariablesTheme {
         System.out.println("\tcomputer has the bluetooth option = " + hasBluetooth);
 
         System.out.println("\n2. Расчет стоимости товара со скидкой");
-        float penPriceRub = 100f;
-        float bookPriceRub = 200f;
+        float penPrice = 100f;
+        float bookPrice = 200f;
         float discountRate = 11f;
-        float sumPriceRub = penPriceRub + bookPriceRub;
-        float discountRub = sumPriceRub / 100 * discountRate;
-        System.out.println("\tобщая стоимость товаров без скидки = " + sumPriceRub + " RUB");
-        System.out.println("\tсумма скидки = " + discountRub + " RUB");
-        System.out.println("\tсумма товаров со скидкой = " + (sumPriceRub - discountRub) + " RUB");
+        float sumPrice = penPrice + bookPrice;
+        float discountPrice = sumPrice / 100 * discountRate;
+        System.out.println("\tобщая стоимость товаров без скидки = " + sumPrice + " RUB");
+        System.out.println("\tсумма скидки = " + discountPrice + " RUB");
+        System.out.println("\tсумма товаров со скидкой = " + (sumPrice - discountPrice) + " RUB");
 
         System.out.println("\n3. Вывод слова JAVA");
         System.out.println("\t   J    a  v     v  a\n" +
@@ -43,49 +43,47 @@ public class VariablesTheme {
                 "\t JJ  a     a  V  a     a");
 
         System.out.println("\n4. Вывод min и max значений целых числовых типов");
-        byte byteMaxValue = Byte.MAX_VALUE;
-        System.out.println("\tbyteMaxValue = " + byteMaxValue);
-        System.out.println("\t++byteMaxValue = " + ++byteMaxValue);
-        System.out.println("\t--byteMaxValue = " + --byteMaxValue);
+        byte maxByte = Byte.MAX_VALUE;
+        System.out.println("\tmaxByte = " + maxByte);
+        System.out.println("\t++maxByte = " + ++maxByte);
+        System.out.println("\t--maxByte = " + --maxByte);
 
-        short shortMaxValue = Short.MAX_VALUE;
-        System.out.println("\n\tshortMaxValue = " + shortMaxValue);
-        System.out.println("\t++shortMaxValue = " + ++shortMaxValue);
-        System.out.println("\t--shortMaxValue = " + --shortMaxValue);
+        short maxShort = Short.MAX_VALUE;
+        System.out.println("\n\tmaxShort = " + maxShort);
+        System.out.println("\t++maxShort = " + ++maxShort);
+        System.out.println("\t--maxShort = " + --maxShort);
 
-        int intMaxValue = Integer.MAX_VALUE;
-        System.out.println("\n\tintMaxValue = " + intMaxValue);
-        System.out.println("\t++intMaxValue = " + ++intMaxValue);
-        System.out.println("\t--intMaxValue = " + --intMaxValue);
+        int maxInt = Integer.MAX_VALUE;
+        System.out.println("\n\tmaxInt = " + maxInt);
+        System.out.println("\t++maxInt = " + ++maxInt);
+        System.out.println("\t--maxInt = " + --maxInt);
 
-        long longMaxValue = Long.MAX_VALUE;
-        System.out.println("\n\tlongMaxValue = " + longMaxValue);
-        System.out.println("\t++longMaxValue = " + ++longMaxValue);
-        System.out.println("\t--longMaxValue = " + --longMaxValue);
+        long maxLong = Long.MAX_VALUE;
+        System.out.println("\n\tmaxLong = " + maxLong);
+        System.out.println("\t++maxLong = " + ++maxLong);
+        System.out.println("\t--maxLong = " + --maxLong);
 
         System.out.println("\n5. Перестановка значений переменных");
-        int aNum = 2;
-        int bNum = 5;
-        int cNum;
+        int a = 2;
+        int b = 5;
+        int tmp = a;
 
         System.out.println("\tперестановка с помощью третьей переменной");
-        System.out.println("\taNum = " + aNum + "; bNum = " + bNum);
-        cNum = aNum;
-        aNum = bNum;
-        bNum = cNum;
-        System.out.println("\taNum = " + aNum + "; bNum = " + bNum);
+        System.out.println("\ta = " + a + "; b = " + b);
+        a = b;
+        b = tmp;
+        System.out.println("\ta = " + a + "; b = " + b);
 
         System.out.println("\n\tперестановка с помощью арифметических операций");
-        System.out.println("\taNum = " + aNum + "; bNum = " + bNum);
-        aNum = aNum + bNum - (bNum = aNum);
-        System.out.println("\taNum = " + aNum + "; bNum = " + bNum);
+        System.out.println("\ta = " + a + "; b = " + b);
+        a = a + b - (b = a);
+        System.out.println("\ta = " + a + "; b = " + b);
 
         System.out.println("\n\tперестановка с помощью побитовой операции ^");
-        System.out.println("\taNum = " + aNum + "; bNum = " + bNum);
-        aNum = aNum ^ bNum;
-        bNum = bNum ^ aNum;
-        aNum = aNum ^ bNum;
-        System.out.println("\taNum = " + aNum + "; bNum = " + bNum);
+        System.out.println("\ta = " + a + "; b = " + b);
+        a ^= b;
+        a ^= (b ^= a);
+        System.out.println("\ta = " + a + "; b = " + b);
 
         System.out.println("\n6. Вывод символов и их кодов");
         char dollar = '$';
@@ -111,8 +109,8 @@ public class VariablesTheme {
         char underscore = '_';
         System.out.println("\t    " + slash + backslash + "\n" +
                 "\t   " + slash + "  " + backslash + "\n" +
-                "\t  " + slash + underscore + leftParenthesis + " " + rightParenthesis + backslash +
-                "\n" +
+                "\t  " + slash + underscore + leftParenthesis + " " +
+                rightParenthesis + backslash + "\n" +
                 "\t " + slash + "      " + backslash + "\n" +
                 "\t" + slash + underscore + underscore + underscore + underscore + slash +
                 backslash + underscore + underscore + backslash);
@@ -120,21 +118,20 @@ public class VariablesTheme {
         System.out.println("\n8. Вывод количества сотен, десятков и единиц числа");
         int number = 123;
         int numberHundreds = number / 100;
-        int numberTens = number % 100 / 10;
-        int numberUnits = number % 10 / 1;
+        int numberTens = number / 10 % 10;
+        int numberOnes = number % 10;
         System.out.println("\tЧисло " + number + " содержит:" + "\n" +
                 "\t  сотен - " + numberHundreds + "\n" +
                 "\t  десятков - " + numberTens + "\n" +
-                "\t  единиц - " + numberUnits + "\n" +
-                "\tСумма его цифр = " + (numberHundreds + numberTens + numberUnits) + "\n" +
-                "\tПроизведение = " + (numberHundreds * numberTens * numberUnits));
+                "\t  единиц - " + numberOnes + "\n" +
+                "\tСумма его цифр = " + (numberHundreds + numberTens + numberOnes) + "\n" +
+                "\tПроизведение = " + (numberHundreds * numberTens * numberOnes));
 
         System.out.println("\n9. Вывод времени");
         int seconds = 86399;
         int hours = seconds / 3600;
-        int remainderSeconds = seconds % 3600;
-        int minutes = remainderSeconds / 60;
-        seconds = remainderSeconds % 60;
+        int minutes = seconds / 60 % 60;
+        seconds = seconds % 60;
         System.out.println("\t" + hours + ":" + minutes + ":" + seconds);
     }
 }

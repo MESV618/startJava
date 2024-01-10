@@ -8,20 +8,20 @@ public class VariableNamesTheme {
         System.out.println("\tцифра = " + digit);
 
         // сумма чисел
-        int numbersSum = 5_875_126 + 19_690;
-        System.out.println("\tсумма чисел = " + String.format(Locale.US, "%,d", numbersSum));
+        int sumNumbers = 5_875_126 + 19_690;
+        System.out.println("\tсумма чисел = " + String.format(Locale.US, "%,d", sumNumbers));
 
         // произведение цифр
-        byte digitsSum = 9 * 9;
-        System.out.println("\tпроизведение цифр = " + digitsSum);
+        byte sumDigits = 9 * 9;
+        System.out.println("\tпроизведение цифр = " + sumDigits);
 
         // максимальное число
         long maxNumber = Long.MAX_VALUE;
         System.out.println("\tмаксимальное число = " + String.format(Locale.US, "%,d", maxNumber));
 
         // количество десятков
-        byte tensNumber = 58 / 10;
-        System.out.println("\tколичество десятков = " + tensNumber);
+        byte numberTens = 58 / 10;
+        System.out.println("\tколичество десятков = " + numberTens);
 
         // вес собаки
         float dogWeight = 12.55f;
@@ -116,8 +116,8 @@ public class VariableNamesTheme {
         System.out.println("\tпуть до файла = " + filePath);
 
         // количество чисел в каждой строке
-        short eachRowNumbersAmount = 258;
-        System.out.println("\tколичество чисел в каждой строке = " + eachRowNumbersAmount);
+        short numbersInRow = 258;
+        System.out.println("\tколичество чисел в каждой строке = " + numbersInRow);
 
         System.out.println("\n2. boolean-переменные");
         // сотни равны?
@@ -149,12 +149,12 @@ public class VariableNamesTheme {
         System.out.println("\tновый? = " + isRecent);
 
         // электронная почта действительная?
-        boolean isEmailValid = true;
-        System.out.println("\tэлектронная почта действительная? = " + isEmailValid);
+        boolean isValidEmail = true;
+        System.out.println("\tэлектронная почта действительная? = " + isValidEmail);
 
         // имеются уникальные строки?
-        boolean hasUniqueRows = false;
-        System.out.println("\tимеются уникальные строки? = " + hasUniqueRows);
+        boolean hasUniqueStrings = false;
+        System.out.println("\tимеются уникальные строки? = " + hasUniqueStrings);
 
         System.out.println("\n3. Аббревиатуры");
         // старый universally unique identifier
