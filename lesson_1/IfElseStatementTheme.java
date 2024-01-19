@@ -44,11 +44,11 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n3. Проверка числа");
-        int c = 256;
-        System.out.print("\t" + c + " является ");
+        int originNumber = 256;
+        System.out.print("\t" + originNumber + " является ");
 
-        if (c != 0) {
-            if (c < 0) {
+        if (originNumber != 0) {
+            if (originNumber < 0) {
                 System.out.print("отрицательным");
             } else {
                 System.out.print("положительным");
@@ -56,7 +56,7 @@ public class IfElseStatementTheme {
 
             System.out.print(" и ");
 
-            if (c % 2 == 0) {
+            if (originNumber % 2 == 0) {
                 System.out.println("четным");
             } else {
                 System.out.println("нечетным");
@@ -66,46 +66,46 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("\n4. Поиск одинаковых цифр в числах");
-        int d = 321;
-        int dHundreds = d / 100;
-        int dTens = d / 10 % 10;
-        int dOnes = d % 10;
+        a = 321;
+        int aHundreds = a / 100;
+        int aTens = a / 10 % 10;
+        int aOnes = a % 10;
 
-        int e = 123;
-        int eHundreds = e / 100;
-        int eTens = e / 10 % 10;
-        int eOnes = e % 10;
+        b = 123;
+        int bHundreds = b / 100;
+        int bTens = b / 10 % 10;
+        int bOnes = b % 10;
 
-        boolean hasEqualHundreds = dHundreds == eHundreds;
-        boolean hasEqualTens = dTens == eTens;
-        boolean hasEqualOnes = dOnes == eOnes;
-        boolean hasEqualPosition = hasEqualHundreds || hasEqualTens || hasEqualOnes;
+        boolean hasEqualHundreds = aHundreds == bHundreds;
+        boolean hasEqualTens = aTens == bTens;
+        boolean hasEqualOnes = aOnes == bOnes;
+        boolean hasEqualDigits = hasEqualHundreds || hasEqualTens || hasEqualOnes;
 
-        if (hasEqualPosition) {
-            System.out.println("\td = " + d + "; e = " + e);
+        if (hasEqualDigits) {
+            System.out.println("\ta = " + a + "; b = " + b);
 
             if (hasEqualHundreds) {
-                System.out.println("\tв 3 разряде одинаковая цифра = " + dHundreds);
+                System.out.println("\tв 3 разряде одинаковая цифра = " + aHundreds);
             }
             if (hasEqualTens) {
-                System.out.println("\tво 2 разряде одинаковая цифра = " + dTens);
+                System.out.println("\tво 2 разряде одинаковая цифра = " + aTens);
             }
             if (hasEqualOnes) {
-                System.out.println("\tв 1 разряде одинаковая цифра = " + dOnes);
+                System.out.println("\tв 1 разряде одинаковая цифра = " + aOnes);
             }
         } else {
             System.out.println("\tравных разрядов нет");
         }
 
         System.out.println("\n5. Определение символа по его коду");
-        char uppercaseW = '\u0057';
-        System.out.print("\tсимвол " + uppercaseW + " является ");
+        char unknownChar = '\u0057';
+        System.out.print("\tсимвол " + unknownChar + " является ");
 
-        if (uppercaseW >= 'a' && uppercaseW <= 'z') {
+        if (unknownChar >= 'a' && unknownChar <= 'z') {
             System.out.println("маленькой буквой");
-        } else if (uppercaseW >= 'A' && uppercaseW <= 'Z') {
+        } else if (unknownChar >= 'A' && unknownChar <= 'Z') {
             System.out.println("большой буквой");
-        } else if (uppercaseW >= '0' && uppercaseW <= '9') {
+        } else if (unknownChar >= '0' && unknownChar <= '9') {
             System.out.println("цифрой");
         } else {
             System.out.println("не буквой и не цифрой");
@@ -113,19 +113,16 @@ public class IfElseStatementTheme {
 
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %");
         float depositAmount = 301_000f;
-        float interestRate;
-        float interestAmount;
+        float interestRate = 0.07f;
         System.out.println("\tсумма вклада = " + depositAmount);
 
         if (depositAmount < 100_000) {
             interestRate = 0.05f;
-        } else if (100_000 <= depositAmount && depositAmount <= 300_000) {
-            interestRate = 0.07f;
-        } else {
+        } else if (300_000 < depositAmount) {
             interestRate = 0.1f;
         }
 
-        interestAmount = depositAmount * interestRate;
+        float interestAmount = depositAmount * interestRate;
         depositAmount += interestAmount;
         System.out.println("\tсумма начисленных процентов = " + interestAmount + "\n" +
                 "\tитоговая сумма = " + depositAmount);
@@ -133,8 +130,8 @@ public class IfElseStatementTheme {
         System.out.println("\n7. Определение оценки по предметам");
         int historyPercent = 59;
         int programmingPercent = 92;
-        int historyGrade = convertToGrade(historyPercent);
-        int programmingGrade = convertToGrade(programmingPercent);
+        int historyGrade = toGrade(historyPercent);
+        int programmingGrade = toGrade(programmingPercent);
 
         System.out.println("\tистория " + historyGrade + "\n" +
                 "\tпрограммирование " + programmingGrade + "\n" +
@@ -154,15 +151,16 @@ public class IfElseStatementTheme {
         System.out.print(annualProfit + " руб.");
     }
 
-    static int convertToGrade (int percent) {
+    private static int toGrade(int percent) {
         if (percent <= 60) {
             return 2;
-        } else if (60 < percent && percent <= 73) {
-            return 3;
-        } else if (73 < percent && percent <= 91) {
-            return 4;
-        } else {
-            return 5;
         }
+        if (60 < percent && percent <= 73) {
+            return 3;
+        }
+        if (73 < percent && percent <= 91) {
+            return 4;
+        }
+        return 5;
     }
 }
