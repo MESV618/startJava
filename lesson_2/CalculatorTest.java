@@ -4,33 +4,27 @@ public class CalculatorTest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Calculator calculator = new Calculator();
+        String answer = "yes";
 
-        while (true) {
+        while (answer.equals("yes")) {
             System.out.println("\nВведите первое число: ");
             int a = scanner.nextInt();
+            calculator.setA(a);
 
             System.out.println("Введите знак математической операции: ");
             char sign = scanner.next().charAt(0);
+            calculator.setSign(sign);
 
             System.out.println("Введите второе число: ");
             int b = scanner.nextInt();
-
-            calculator.setA(a);
             calculator.setB(b);
-            calculator.setSign(sign);
 
             System.out.println(a + " " + sign + " " + b + " = " + calculator.calculate());
 
-            String answer;
-            while (true) {
+            do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]: ");
                 answer = scanner.next();
-                if (answer.equals("yes")) {
-                    break;
-                } else if (answer.equals("no")) {
-                    return;
-                }
-            }
+            } while (!(answer.equals("yes") || answer.equals("no")));
         }
     }
 }

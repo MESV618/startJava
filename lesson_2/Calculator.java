@@ -3,24 +3,12 @@ public class Calculator {
     private int a;
     private int b;
 
-    public char getSign() {
-        return sign;
-    }
-
     public void setSign(char sign) {
         this.sign = sign;
     }
 
-    public int getA() {
-        return a;
-    }
-
     public void setA(int a) {
         this.a = a;
-    }
-
-    public int getB() {
-        return b;
     }
 
     public void setB(int b) {
@@ -28,33 +16,26 @@ public class Calculator {
     }
 
     public int calculate() {
-        int result = 1;
-
         switch (sign) {
             case '+':
-                result = a + b;
-                break;
+                return a + b;
             case '-':
-                result = a - b;
-                break;
+                return a - b;
             case '*':
-                result = a * b;
-                break;
+                return a * b;
             case '/':
-                result = a / b;
-                break;
+                return a / b;
             case '^':
+                int result = 1;
                 for (int i = b; i > 0; i--) {
                     result *= a;
                 }
-                break;
+                return result;
             case '%':
-                result = a % b;
-                break;
+                return a % b;
             default:
                 System.out.println("Знак не распознан, операция не поддерживается");
+                return 0;
         }
-
-        return result;
     }
 }
