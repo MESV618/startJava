@@ -10,8 +10,10 @@ public class Jaeger {
     private int armor;
 
     public Jaeger() {}
-    public Jaeger(String modelName, String mark, String origin, String status, String pilot, float height,
-                  float weight, int strength, int armor) {
+
+    public Jaeger(String modelName, String mark, String origin,
+            String status, String pilot, float height,
+            float weight, int strength, int armor) {
         this.modelName = modelName;
         this.mark = mark;
         this.origin = origin;
@@ -21,21 +23,6 @@ public class Jaeger {
         this.weight = weight;
         this.strength = strength;
         this.armor = armor;
-    }
-
-    @Override
-    public String toString() {
-        return "Jaeger{" +
-                "modelName='" + modelName + '\'' +
-                ", mark='" + mark + '\'' +
-                ", origin='" + origin + '\'' +
-                ", status='" + status + '\'' +
-                ", pilot='" + pilot + '\'' +
-                ", height=" + height +
-                ", weight=" + weight +
-                ", strength=" + strength +
-                ", armor=" + armor +
-                '}';
     }
 
     public String getModelName() {
@@ -128,5 +115,20 @@ public class Jaeger {
 
     void fight() {
         System.out.println("fighting");
+    }
+
+    @Override
+    public String toString() {
+        return "Jaeger{" +
+                "modelName='" + modelName + '\'' +
+                ", mark='" + mark + '\'' +
+                ", origin='" + origin + '\'' +
+                ", status='" + status + '\'' +
+                ", pilot='" + pilot + '\'' +
+                ", height=" + height +
+                ", weight=" + weight +
+                ", strength=" + strength +
+                ", armor=" + armor +
+                '}';
     }
 }

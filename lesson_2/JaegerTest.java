@@ -16,8 +16,8 @@ public class JaegerTest {
         jaeger1.setHeight(200);
         System.out.println(jaeger1.toString());
 
-        Jaeger jaeger2 = new Jaeger("Coyote Tango", "Mark-1", "Japan", "Destroyed",
-                "Tamsin Sevier", 85.34f, 2326, 7, 4);
+        Jaeger jaeger2 = new Jaeger("Coyote Tango", "Mark-1", "Japan",
+                "Destroyed", "Tamsin Sevier", 85.34f, 2326, 7, 4);
         jaeger2.fight();
         jaeger2.move();
         jaeger2.setArmor(5);
