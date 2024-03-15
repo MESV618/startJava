@@ -20,16 +20,15 @@ public final class GuessNumber {
             scanner.nextLine();
 
             int playerNum = currentPlayer.getNumber();
-            if (playerNum < randomNum) {
-                System.out.println("Число " + playerNum + " меньше того, что загадал компьютер");
-                continue;
-            } else if (playerNum > randomNum) {
-                System.out.println("Число " + playerNum + " больше того, что загадал компьютер");
-                continue;
+            if (playerNum == randomNum) {
+                System.out.println("Вы угадали!");
+                break;
             }
-
-            System.out.println("Вы угадали!");
-            break;
+            if (playerNum > randomNum) {
+                System.out.println("Число " + playerNum + " больше того, что загадал компьютер");
+            } else {
+                System.out.println("Число " + playerNum + " меньше того, что загадал компьютер");
+            }
         }
     }
 }
