@@ -1,3 +1,5 @@
+package com.startjava.lesson_1.base;
+
 import java.util.Locale;
 
 public class VariableNamesTheme {
