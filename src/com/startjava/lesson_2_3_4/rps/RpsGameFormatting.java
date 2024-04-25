@@ -1,4 +1,4 @@
-package com.startjava.lesson_2_3.rps;
+package com.startjava.lesson_2_3_4.rps;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -35,7 +35,7 @@ public class RpsGameFormatting {
 
     private static int generatePosition(String name1, Random r) {
         System.out.println("Ход " + name1 + ": ");
-        return r.nextInt(1, 100);
+        return r.nextInt(100) + 1;
     }
 
     private static String defineSign(int position) {
